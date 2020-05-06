@@ -10,8 +10,9 @@ public class Player {
     private Integer points;
     private Integer plusMinus;
     private Integer fights;
+    private Integer hits;
 
-    public Player(String firstName, String lastName, Integer number, Integer goals, Integer assists, Integer plusMinus, Integer fights) {
+    public Player(String firstName, String lastName, Integer number, Integer goals, Integer assists, Integer plusMinus, Integer fights, Integer hits) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
@@ -20,6 +21,7 @@ public class Player {
         this.points = goals + assists;
         this.plusMinus = plusMinus;
         this.fights = fights;
+        this.hits = hits;
     }
 
     public Player() {
@@ -93,6 +95,14 @@ public class Player {
         this.fights = fights;
     }
 
+    public Integer getHits() {
+        return hits;
+    }
+
+    public void setHits(Integer hits) {
+        this.hits = hits;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
@@ -103,7 +113,8 @@ public class Player {
                 ", assists=" + assists +
                 ", points=" + points +
                 ", plusMinus=" + plusMinus +
-                ",fights=" + fights +
+                ", fights=" + fights +
+                ", hits=" + hits +
                 '}';
     }
 }
