@@ -9,8 +9,9 @@ public class Player {
     private Integer assists;
     private Integer points;
     private Integer plusMinus;
+    private Integer fights;
 
-    public Player(String firstName, String lastName, Integer number, Integer goals, Integer assists, Integer plusMinus) {
+    public Player(String firstName, String lastName, Integer number, Integer goals, Integer assists, Integer plusMinus, Integer fights) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
@@ -18,6 +19,7 @@ public class Player {
         this.assists = assists;
         this.points = goals + assists;
         this.plusMinus = plusMinus;
+        this.fights = fights;
     }
 
     public Player() {
@@ -83,6 +85,14 @@ public class Player {
         this.plusMinus = plusMinus;
     }
 
+    public Integer getFights() {
+        return fights;
+    }
+
+    public void setFights(Integer fights) {
+        this.fights = fights;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
@@ -93,6 +103,7 @@ public class Player {
                 ", assists=" + assists +
                 ", points=" + points +
                 ", plusMinus=" + plusMinus +
+                ",fights=" + fights +
                 '}';
     }
 }
